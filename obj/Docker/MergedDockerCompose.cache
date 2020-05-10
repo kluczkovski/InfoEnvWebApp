@@ -1,0 +1,16 @@
+services:
+  infoenvwebapp:
+    build:
+      context: /Users/ekluczkovski/Projects/InfoEnvWebApp
+      dockerfile: ./Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: infoenvwebapp
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/ekluczkovski/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/ekluczkovski/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

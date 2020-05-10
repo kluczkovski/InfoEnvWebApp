@@ -1,0 +1,16 @@
+﻿@model InfoEnvWebApp.Controllers.Info
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome Jornada Docker de A a Z</h1>
+
+        <p>Data: @Model.DateTime</p>
+        <p>FrameWorkVersion: @Model.FrameWorkVersion</p>
+        <p>OSVersion: @Model.OSVersion</p>
+        <p>VariavelDeAmbienteManual: @Model.VariableDeAmbienteManual</p>
+        <p>VariavelDeAmbienteConfiguration: @Model.VariableDeAmbienteConfiguration</p>
+
+    </div>
